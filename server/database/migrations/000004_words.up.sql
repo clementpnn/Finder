@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS words (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  word VARCHAR(255) UNIQUE NOT NULL
+);

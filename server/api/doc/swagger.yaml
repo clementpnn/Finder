@@ -1,0 +1,101 @@
+definitions:
+  model.Url:
+    properties:
+      url:
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /crawler/deindex:
+    post:
+      consumes:
+      - application/json
+      description: Deindex a domain, delete its existing data from the database
+      parameters:
+      - description: URL of the domain to deindex
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/model.Url'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Deindex a domain
+      tags:
+      - Crawler
+  /crawler/index:
+    post:
+      consumes:
+      - application/json
+      description: Index a domain, insert its pages and words into the database
+      parameters:
+      - description: URL of the domain to index
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/model.Url'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Index a domain
+      tags:
+      - Crawler
+  /crawler/reindex:
+    post:
+      consumes:
+      - application/json
+      description: Reindex a domain, delete its existing data and reinsert pages and
+        words into the database
+      parameters:
+      - description: URL of the domain to reindex
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/model.Url'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Reindex a domain
+      tags:
+      - Crawler
+swagger: "2.0"
