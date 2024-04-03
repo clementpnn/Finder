@@ -1,4 +1,6 @@
-<img alt="Home Page" src="./assets/logo.png">
+<div align="center">
+  <img alt="Home Page" src="./assets/logo.png">
+</div>
 
 <h1 align="center">Finder</h1>
 <p align="center">
