@@ -45,10 +45,12 @@ DB_PASSWORD="root"
 DB_NAME="postgres"
 ```
 
-To run the app locally, you can run the following command:
+To run the app locally, you can run the following commands:
 
 ```
 docker-compose up -d
+cd server
+make db-up
 ```
 
 ## Tech Stack
