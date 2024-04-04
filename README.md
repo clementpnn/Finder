@@ -24,10 +24,10 @@ At the heart of "Finder" are the sophisticated TF-IDF (Term Frequency-Inverse Do
 
 ## Algorithm
 
-TF = Total number of words in the page / Term frequency in the page
-IDF = log(Number of pages containing the term / Total number of pages)
-TF-IDF = TF×IDF
-Total TF-IDF Score = ∑terms(TF-IDF of the term)
+TF = Total number of words in the page / Term frequency in the page<br>
+IDF = log(Number of pages containing the term / Total number of pages)<br>
+TF-IDF = TF×IDF<br>
+Total TF-IDF Score = ∑terms(TF-IDF of the term)<br>
 
 ​PageRank = Number of incoming links
 
